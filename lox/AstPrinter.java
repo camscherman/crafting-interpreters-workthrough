@@ -26,7 +26,7 @@ class AstPrinter implements Expr.Visitor<String> {
 
   @Override
   public String visitVariableExpr(Expr.Variable expr){
-    return "Cannot access variables";
+    return expr.toString();
   }
 //  Hacky
   @Override
@@ -40,7 +40,7 @@ class AstPrinter implements Expr.Visitor<String> {
   }
   @Override
   public String visitCallExpr(Expr.Call expr){
-    return "called";
+    return expr.toString();
   }
 
   @Override
