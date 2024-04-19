@@ -49,7 +49,7 @@ public class Lox {
   private static void run(String source) {
     Scanner scanner = new Scanner(source);
     List<Token> tokens = scanner.scanTokens();
-    System.out.println(tokens);
+
     Parser parser = new Parser(tokens);
     List<Stmt> statements = parser.parse();
     if(hadError) return;
