@@ -26,7 +26,7 @@ class LoxClass implements LoxCallable {
         if(initializer != null){
             initializer.bind(instance).call(interpreter, arguments);
         }
-        return initializer;
+        return instance;
     }
 
     @Override
