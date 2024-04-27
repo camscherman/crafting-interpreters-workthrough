@@ -6,8 +6,12 @@ public class LoxInstance {
     private LoxClass klass;
     private final Map<String, Object> fields = new HashMap<>();
 
+
     LoxInstance(LoxClass klass){
         this.klass = klass;
+    }
+    LoxInstance(){
+        this.klass = null;
     }
     @Override
     public String toString(){
